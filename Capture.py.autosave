@@ -17,7 +17,7 @@ import time
 # Settings
 save_path = "/"                         # Save images to root directory
 file_num = 0                            # Starting point for filename
-file_suffix = ".bip"                    # Extension for image file
+file_suffix = ".bmp"                    # Extension for image file
 countdown = 3                           # Seconds to count down from
 countdown_delay = 1000                  # Milliseconds
 width = 96                              # Width of frame (pixels)

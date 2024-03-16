@@ -1,5 +1,7 @@
-# Object-detection-device
+<h1> Object-detection-device</h1>
 Project implemented based on the STM32H750 microcontroller from WeAct Studio and the OpenMV software.
+
+<h2> Data set was colectet with <a href= "Capture.py">this cod</a> in <a href="/DataSet/"> tis folder.</a></h2>
 
 <p>WeAct Studio STM32H7XX <a href="https://github.com/WeActStudio/MiniSTM32H7xx/tree/master">link to project</a></p>
 <ul>
