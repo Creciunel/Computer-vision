@@ -1,6 +1,7 @@
 <h1>Object Detection Device</h1>
 
 <h2>Hardware</h2>
+
 <table>
   <tr>
     <th>
@@ -15,6 +16,7 @@
     </th>
     <th><img src="https://github.com/WeActStudio/MiniSTM32H7xx/raw/master/Images/STM32H750VB_1.jpg" alt="MCU"></th>
   </tr>
+</table>
 
 <h2>Software</h2>
 <p>Project implemented using the OpenMV software.</p>
