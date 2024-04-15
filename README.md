@@ -13,7 +13,7 @@
         </ul>
       </ul>
     </th>
-    <th><img src="https://github.com/WeActStudio/MiniSTM32H7xx/raw/master/Images/STM32H750VB_1.jpg" alt="MCU" style="max-width: 100%;"></th>
+    <th><img src="https://github.com/WeActStudio/MiniSTM32H7xx/raw/master/Images/STM32H750VB_1.jpg" alt="MCU"></th>
   </tr>
 
 <h2>Software</h2>
