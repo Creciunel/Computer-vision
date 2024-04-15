@@ -1,11 +1,27 @@
-<h1> Object-detection-device</h1>
-Project implemented based on the STM32H750 microcontroller from WeAct Studio and the OpenMV software.
+<h1>Object Detection Device</h1>
 
-<h2> Data set was colectet with <a href= "Capture.py">this cod</a> in <a href="/DataSet/"> tis folder.</a></h2>
-
-<p>WeAct Studio STM32H7XX <a href="https://github.com/WeActStudio/MiniSTM32H7xx/tree/master">link to project</a></p>
+<h2>Hardware</h2>
 <ul>
-  <li>Display: 0.96''</li>
-  <li>Camera: OV7725 VGA (640x480)<a href="https://cdn.sparkfun.com/datasheets/Sensors/LightImaging/OV7725.pdf">datasheet</a></li>
-  <li>Possibility of adding an SD card</li>
+  <li>WeAct Studio STM32H7XX microcontroller <a href="https://github.com/WeActStudio/MiniSTM32H7xx/tree/master">project link</a></li>
+  <ul>
+    <li>Display: 0.96''</li>
+    <li>Camera: OV7725 VGA (640x480) <a href="https://cdn.sparkfun.com/datasheets/Sensors/LightImaging/OV7725.pdf">datasheet</a></li>
+    <li>Possibility of adding an SD card</li>
+  </ul>
 </ul>
+
+<h2>Software</h2>
+<p>Project implemented using the OpenMV software.</p>
+
+<h3>Data Collection</h3>
+<p>The dataset was collected using <a href="Capture.py">this code</a> located in <a href="/DataSet/">this folder</a>.</p>
+
+<h2>Requirements</h2>
+<ul>
+  <li>WeAct Studio STM32H7XX - flashed with <a href="https://github.com/WeActStudio/MiniSTM32H7xx/tree/master/SDK/openmv/Firmwares/V4.4.1/Internal%20Flash">bin file</a>, check the latest version.</li>
+  <li>OpenMV IDE <a href="https://openmv.io/">official website</a>.</li>
+  <li>Data set</li>
+  <li><a href="https://colab.research.google.com/drive/1fcfrasDF4Yx31ZPcaa_6U8qPdXJAfjwx">Google Colab</a> for collaborative development and training</li>
+</ul>
+
+<p>This project is licensed under the <a href="LICENSE">MIT License</a>.</p>
