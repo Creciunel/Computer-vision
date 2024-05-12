@@ -13,11 +13,10 @@ import sensor
 import image
 import time
 
-
 # Settings
 save_path = "/"                         # Save images to root directory
 file_num = 0                            # Starting point for filename
-file_suffix = ".bip"                    # Extension for image file
+file_suffix = ".bmp"                    # Extension for image file
 countdown = 3                           # Seconds to count down from
 countdown_delay = 1000                  # Milliseconds
 width = 96                              # Width of frame (pixels)
@@ -101,18 +100,3 @@ while(True):
                         int(height / 2 + 0.5) - 50,
                         str(countdown),
                         scale=10.0)
-# Untitled - By: crcat - Sat Mar 9 2024
-
-import sensor, image, time
-
-sensor.reset()
-sensor.set_pixformat(sensor.RGB565)
-sensor.set_framesize(sensor.QVGA)
-sensor.skip_frames(time = 2000)
-
-clock = time.clock()
-
-while(True):
-    clock.tick()
-    img = sensor.snapshot()
-    print(clock.fps())
