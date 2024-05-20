@@ -38,8 +38,8 @@ To implement face detection, follow these steps:
 
 1. **Install OpenCV on Raspberry Pi**:
     ```sh
-    sudo apt update
-    sudo apt install python3-opencv
+    sudo apt update -y
+    sudo apt install python3-opencv -y
     ```
 
 2. **Basic Code for Face Detection**:
