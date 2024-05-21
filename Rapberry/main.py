@@ -1,49 +1,30 @@
-import importlib.util
-import os
+#/usr/bin/env python3
 
-# Verifică dacă OpenCV este deja instalat
-try:
-    importlib.util.find_spec('cv2')
-    print("OpenCV is already installed.")
-except ImportError:
-    print("OpenCV is not installed. Installing...")
-
-    # Instalează OpenCV folosind pip
-    os.system("pip install opencv-python")
-
-    # Verifică din nou dacă instalarea a avut succes
-    try:
-        importlib.util.find_spec('cv2')
-        print("OpenCV has been successfully installed.")
-    except ImportError:
-        print("Error: Failed to install OpenCV.")
-
+# Load the OpenCV library
 import cv2
+import sys
+print(sys.path)
 
-# Inițializează camera
-cap = cv2.VideoCapture(0)
+# Print version
+print(cv2.__version__)
 
-# It's a good idea to check whether the camera is opened correctly
-if not cap.isOpened():
-    print("Error: Could not open camera.")
-    exit()
+# Load the pre-trained face detection cascade
+face_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml')
 
-while True:
-    # Captură frame-uri de la camera
-    ret, frame = cap.read()
+# Load the image
+image = cv2.imread('/DataSer/Face/face_1.jpg')
 
-    # Verifică dacă frame-ul a fost capturat corect
-    if not ret:
-        print("Error: Could not read frame.")
-        break
+# Convert the image to grayscale for face detection
+gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 
-    # Afișează frame-ul pe ecran
-    cv2.imshow('Video', frame)
+# Detect faces in the image
+faces = face_cascade.detectMultiScale(gray, scaleFactor=1.1, minNeighbors=5, minSize=(30, 30))
 
-    # Așteaptă apăsarea tastei 'q' pentru a ieși din loop
-    if cv2.waitKey(1) & 0xFF == ord('q'):
-        break
+# Draw rectangles around the detected faces
+for (x, y, w, h) in faces:
+    cv2.rectangle(image, (x, y), (x+w, y+h), (255, 0, 0), 2)
 
-# Eliberează resursele
-cap.release()
+# Display the image with detected faces
+cv2.imshow('Detected Faces', image)
+cv2.waitKey(0)
 cv2.destroyAllWindows()
